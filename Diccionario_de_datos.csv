@@ -1,0 +1,81 @@
+table_name;column_name;data_type;column_description
+cita;id_cliente;integer;Id del cliente que realizo la cita
+cita;id_horario;integer;Id del horario para la cita
+cita;id;integer;Id de la cita
+cita;fecha;date;Fecha en de la cita
+cita;id_peluqueria;integer;Id de la peluqueria en que se hizo la cita
+cita;id_peluquero;integer;Id del peluquero que atendió la cita
+cliente;apellido;character varying;Apellido del cliente
+cliente;id;integer;ID del cliente, representa su rut
+cliente;fono;integer;Fono de contacto del cliente
+cliente;id_comuna;integer;Id de la comuna a la que pertenece el cliente
+cliente;eshombre;boolean;Indica si el cliente es hombre o mujer
+cliente;nombre;character varying;Nombre del cliente
+comuna;nombre;character varying;nombre de la comuna
+comuna;id_region;integer;id de la region a la que pertenece
+comuna;id;integer;id de la comuna
+detalle_servicio;id;integer;Id de la tabla producto_peluqueria
+detalle_servicio;id_servicio_peluqueria;integer;Id del servicio disponible en la peluqueria que pidió el cliente
+detalle_servicio;id_cita;integer;Id de la cita asociada al detalle
+detalle_venta;id_venta;integer;Id de la venta
+detalle_venta;id_producto_peluqueria;integer;Id del producto existente en la peluqueria que se vendió
+detalle_venta;id;integer;Id de la venta
+detalle_venta;cantidad;integer;Cantidad del producto que se vendió en una venta
+empleados;apellido;character varying;Apellido del empleado
+empleados;id;integer;Id de un empleado
+empleados;rut;integer;Rut del empleado
+empleados;direccion;integer;Direccion del empleado
+empleados;nombre;character varying;Nombre del empleado
+empleados;id_peluqueria;integer;Id de la peluqueria en la que trabaja el empleado
+empleados;id_comuna;integer;Id de la comuna a la cual pertenece el empleado
+horarios;id;integer;Id de un Horario posible
+horarios;hora;time without time zone;Horario posible
+peluqueria;id;integer;Id de la peluqueria
+peluqueria;direccion;integer;Dirección de la peluqueria
+peluqueria;fono;integer;Fono de contacto de la peluqueria
+peluqueria;id_comuna;integer;Id de la comuna a la que pertenece la peluqueria
+peluqueria;nombre;character varying;Nombre de la peluqueria
+peluquero;id;integer;Id de un peluquero
+peluquero;id_empleado;integer;Su id de empleado
+prod_pel_prov;id_producto_peluqueria;integer;Id del producto ubicado en la peluqueria que se compró
+prod_pel_prov;fecha;date;Fecha en que se realizo la venta
+prod_pel_prov;cantidad;integer;Cantidad del producto que se compró
+prod_pel_prov;id_proveedor;integer;Id del proveedor
+prod_pel_prov;id;integer;Id de la tabla prod_pel_prov
+producto_peluqueria;id_producto;integer;Id del producto del cual la peluqueria tiene existencias
+producto_peluqueria;prec_dif;double precision;Porcentaje de precio diferenciado que tiene un producto dentro de la peluqueria
+producto_peluqueria;id;integer;Id de la tabla producto_peluqueria
+producto_peluqueria;stock;integer;Cantidad de productos que posee la peluqueria
+producto_peluqueria;id_peluqueria;integer;Id de la peluqueria que tiene existencias del producto
+productos;nombre;character varying;Nombre del producto
+productos;id;integer;Id del producto
+productos;id_proveedor;integer;Id del proveedor al que se le compra el producto
+productos;precio_venta;integer;Precio al que el producto se vende a los clientes
+productos;precio_compra;integer;Precio al que el producto se compra al proveedor
+proveedor;nombre;character varying;nombre del proveedor
+proveedor;id;integer;id del proveedor
+proveedor;direccion;integer;direccion del proveedor
+proveedor;id_comuna_casa_matriz;integer;id de la comuna donde se ubica la cada matriz del proveedor
+proveedor;fono;integer;fono de contacto del proveedor
+region;nombre;character varying;nombre de la region
+region;id;integer;id de la region
+servicio;id;integer;Id del servicio
+servicio;horas;integer;Cantidad de horas que lleva realizar el servicio
+servicio;nombre;character varying;Nombre del servicio
+servicio;precio_venta;integer;Precio al que se vende el servicio a los clientes
+servicio_peluqueria;id_servicio;integer;Id del servicio
+servicio_peluqueria;id_peluqueria;integer;Id de la peluqueria que proporciona el servicio
+servicio_peluqueria;prec_dif;double precision;Porcentaje diferenciado del precio variado por peluqueria
+servicio_peluqueria;id;integer;Id de la tabla servicio_peluqueria
+servicio_prod;cantidad;integer;Cantidad de existencias que utiliza el servicio para ser llevado a cabo
+servicio_prod;id_servicio;integer;Id del servicio que se relaciona con uno o más productos
+servicio_prod;id;integer;Id de la tabla servicio_prod
+servicio_prod;id_producto;integer;Id del producto que utiliza el servicio
+sueldo;cantidad;integer;Dinero pagado al empleado
+sueldo;fecha_pago;date;Fecha en la que se pago
+sueldo;id_empleado;integer;Id del empleado al que se pago
+sueldo;id;integer;Id de una fila de la tabla sueldo
+venta;fecha;date;Fecha de la venta
+venta;id;integer;Id de la venta
+venta;id_peluqueria;integer;Id de la venta
+venta;id_cliente;integer;Id del cliente al que se le vendió
